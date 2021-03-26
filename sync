@@ -19,7 +19,8 @@ git clone https://github.com/Realme-G70-Series/device_realme_rmx2020.git device/
 git clone https://github.com/Realme-G70-Series/vendor_realme_rmx2020.git vendor/realme/rmx2020
 
 #lineage--->aosp (sorry im lazy to do it on github)
-cd device/realme/rmx2020 && sed -i s/lineage/aosp/g AndroidProduct.mk && sed -i s/lineage/aosp/g lineage_rmx2020.mk && mv lineage_rmx2020.mk aosp_rmx2020.mk
+cd device/realme/rmx2020 && sed -i s/lineage/aosp/g AndroidProduct.mk && sed -i s/lineage/aosp/g lineage_rmx2020.mk && mv lineage_rmx2020.mk aosp_rmx2020.mk && cd ../../..
+cd /tmp/rom
 
 cd external/selinux && curl -L http://ix.io/2FhM > sasta.patch && git am sasta.patch && cd ../..
 cd frameworks/opt/net/wifi && wget https://raw.githubusercontent.com/SamarV-121/android_vendor_extra/lineage-18.1/patches/frameworks/opt/net/wifi/0001-wifi-Add-StaState-API.patch && patch -p1 < *.patch && cd -
