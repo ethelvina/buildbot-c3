@@ -4,8 +4,8 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 source build/envsetup.sh
-lunch lineage_rmx2020-userdebug
-export SAKURA_BUILD_TYPE=gapps
+lunch aosp_rmx2020-userdebug
+export HYCON_MAINTAINER=Box_Boi
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -32,4 +32,4 @@ make_rom(){
 
 make_metalava
 make_rom & 
-sleep 5200 && kill "$!"
+sleep 4500 && kill "$!"
