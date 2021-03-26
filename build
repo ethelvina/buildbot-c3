@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 source build/envsetup.sh
-lunch aicp_rmx2020-userdebug
+lunch aosp_rmx2020-userdebug
 export CCACHE_DIR=/tmp/ccache
 export ALLOW_MISSING_DEPENDENCIES=true
 export CCACHE_EXEC=$(which ccache)
